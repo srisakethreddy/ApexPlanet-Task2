@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  gap: 40px;
+  padding: 30px 20px;
+}
+
+h2 {
+  color: #fff;
+  text-align: center;
+}
+
+.card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 25px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+input:focus, textarea:focus {
+  border-color: #2575fc;
+  outline: none;
+  box-shadow: 0 0 8px #a3c0ff;
+}
+
+button {
+  background: #2575fc;
+  color: #fff;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #1e63d1;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+li {
+  background: #f2f2f2;
+  padding: 10px 14px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeIn 0.3s ease-in;
+}
+
+li.completed {
+  text-decoration: line-through;
+  background: #d1ffd6;
+}
+
+.todo-section {
+  margin-top: 20px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.todo-actions button {
+  background: red;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+@media (max-width: 450px) {
+  .card {
+    padding: 20px;
+  }
+}
